@@ -60,6 +60,11 @@ function compare_string {
     fi
 }
 
+#
+# 引数のパスのファイル(UTF-8前提)が、シフトJISの範囲内文字列のみからなるかどうかを1行ずつチェックする
+# @param  string input 往復変換処理をするファイルのパス
+# @output string       ^(OK|NG) ${line}$
+#
 function compare_file {
     local compared_file=$1
 
