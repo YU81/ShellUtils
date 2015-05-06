@@ -51,7 +51,7 @@ function compare_string {
     local compared_string=$1
     local converted_round_line=$(convert_round ${compared_string})
 
-    if [ "${compared_string}" = "{convert_round_line}" ]; then
+    if [ "${compared_string}" = "${converted_round_line}" ]; then
         echo "OK" "${compared_string}"
         return 0
     else
